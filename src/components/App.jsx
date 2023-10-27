@@ -63,6 +63,15 @@ export const App = () => {
     setBad(bad + 1);
   };
   const countTotalFeedback = total => (total = good + neutral + bad);
+
+  const countPositiveFeedbackPercentage = percentege => {
+    const total = good + neutral + bad;
+
+    if (total !== 0) {
+      return Math.ceil((percentege = (good / total) * 100));
+    }
+  };
+
   return (
     <div>
       <Section title={'Please leave feedback'}>
@@ -78,6 +87,7 @@ export const App = () => {
           neutral={neutral}
           bad={bad}
           countTotalFeedback={countTotalFeedback}
+          countPositiveFeedbackPercentage={countPositiveFeedbackPercentage}
         ></Statistic>
       </Section>
     </div>
