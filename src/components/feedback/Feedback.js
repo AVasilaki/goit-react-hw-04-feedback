@@ -1,14 +1,14 @@
 import { Wrapper } from './feedback.styled';
-export const Feedback = ({ leaveFeedback }) => {
+export const Feedback = ({ onGood, onNeutral, onBad }) => {
   return (
     <Wrapper>
-      <button type="button" onClick={() => leaveFeedback('good')}>
+      <button type="button" onClick={onGood}>
         Good
       </button>
-      <button type="button" onClick={() => leaveFeedback('neutral')}>
+      <button type="button" onClick={onNeutral}>
         Neutral
       </button>
-      <button type="button" onClick={() => leaveFeedback('bad')}>
+      <button type="button" onClick={onBad}>
         Bad
       </button>
     </Wrapper>

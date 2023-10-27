@@ -1,7 +1,9 @@
 export const Statistic = ({
-  state: { good, neutral, bad },
+  good,
+  neutral,
+  bad,
   countTotalFeedback,
-  countPositiveFeedbackPercentage,
+  // countPositiveFeedbackPercentage,
 }) => {
   if (countTotalFeedback() !== 0) {
     return (
@@ -10,7 +12,7 @@ export const Statistic = ({
         <p>Neutral:{neutral}</p>
         <p>Bad:{bad} </p>
         <p>Total:{countTotalFeedback()}</p>
-        <p>Positive feedback:{countPositiveFeedbackPercentage()}%</p>
+        {/* <p>Positive feedback:{countPositiveFeedbackPercentage()}%</p> */}
       </>
     );
   } else return 'There is no feedback';
