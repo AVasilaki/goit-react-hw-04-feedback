@@ -17,6 +17,11 @@ export const App = () => {
   const onBad = () => {
     setBad(bad + 1);
   };
+  const feedback = [
+    { name: 'Good', set: onGood, id: 1 },
+    { name: 'Bad', set: onBad, id: 2 },
+    { name: 'Neutral', set: onNeutral, id: 3 },
+  ];
   const countTotalFeedback = total => (total = good + neutral + bad);
 
   const countPositiveFeedbackPercentage = percentege => {
@@ -31,9 +36,8 @@ export const App = () => {
     <div>
       <Section title={'Please leave feedback'}>
         <Feedback
-          onGood={onGood}
-          onNeutral={onNeutral}
-          onBad={onBad}
+         
+          feedback={feedback}
         ></Feedback>
       </Section>
       <Section title={'Statistic'}>

@@ -1,16 +1,16 @@
 import { Wrapper } from './feedback.styled';
-export const Feedback = ({ onGood, onNeutral, onBad }) => {
+export const Feedback = ({ feedback }) => {
   return (
-    <Wrapper>
-      <button type="button" onClick={onGood}>
-        Good
-      </button>
-      <button type="button" onClick={onNeutral}>
-        Neutral
-      </button>
-      <button type="button" onClick={onBad}>
-        Bad
-      </button>
-    </Wrapper>
+    <ul>
+      <Wrapper>
+        {feedback.map(item => (
+          <li key={item.id}>
+            <button type="button" onClick={item.set}>
+              {item.name}
+            </button>
+          </li>
+        ))}
+      </Wrapper>
+    </ul>
   );
 };
