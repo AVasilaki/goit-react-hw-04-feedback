@@ -35,10 +35,7 @@ export const App = () => {
   return (
     <div>
       <Section title={'Please leave feedback'}>
-        <Feedback
-         
-          feedback={feedback}
-        ></Feedback>
+        <Feedback feedback={feedback}></Feedback>
       </Section>
       <Section title={'Statistic'}>
         <Statistic
